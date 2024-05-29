@@ -8,6 +8,6 @@
     "skipLibCheck": true,
     "resolveJsonModule": true
   },
-  "include": ["./**/*.ts"],
+  "include": ["./scripts", "./test", "./typechain", "./hardhat.config.ts"],
   "exclude": ["node_modules"]
 }
