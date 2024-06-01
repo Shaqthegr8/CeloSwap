@@ -1,4 +1,4 @@
-Project Description: CeloSwap
+CeloSwap
 
 **CeloSwap** is a next-generation e-commerce platform leveraging blockchain technology to create a secure, efficient, and environmentally friendly shopping experience. The platform is designed to run seamlessly on mobile devices, offering a scalable template for small businesses to establish their online presence. CeloSwap integrates several cutting-edge protocols and frameworks to enhance payment security, customer communication, and environmental sustainability.
 
