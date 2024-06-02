@@ -10,6 +10,8 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "expo": "^51.0.9"
+    "@celo/contractkit": "^8.0.0",
+    "expo": "^51.0.9",
+    "wagmi": "^2.9.8"
   }
 }

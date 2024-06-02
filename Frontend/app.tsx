@@ -1,34 +1,33 @@
-// App.tsx
-import 'react-native-gesture-handler';
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './app/(tabs)/(Home)';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { WagmiConfig, createClient, configureChains, defaultChains } from 'wagmi';
+import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { CeloAlfajores } from '@celo-tools/hardhat-celo';
+import Home from './components/Home';
+import Product from './components/Product';
 
+// Create wagmi client
+const { chains, provider } = configureChains([CeloAlfajores], [
+  // Define providers here if needed
+]);
 
-type Product = {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-};
-
-type RootStackParamList = {
-  Home: undefined;
-  ProductDetail: { product: Product };
-  Cart: undefined;
-};
-
-const Stack = createStackNavigator<RootStackParamList>();
+const wagmiClient = createClient({
+  autoConnect: true,
+  provider,
+});
 
 const App: React.FC = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        
-      </Stack.Navigator>
-    </NavigationContainer>
+    <WagmiConfig client={wagmiClient}>
+      <RainbowKitProvider chains={chains}>
+        <Router>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/product/:id" exact component={Product} />
+          </Switch>
+        </Router>
+      </RainbowKitProvider>
+    </WagmiConfig>
   );
 };
 
