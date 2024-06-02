@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-# Sample Hardhat Project
-
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
-```
-=======
 CeloSwap
 
 **CeloSwap** is a next-generation e-commerce platform leveraging blockchain technology to create a secure, efficient, and environmentally friendly shopping experience. The platform is designed to run seamlessly on mobile devices, offering a scalable template for small businesses to establish their online presence. CeloSwap integrates several cutting-edge protocols and frameworks to enhance payment security, customer communication, and environmental sustainability.

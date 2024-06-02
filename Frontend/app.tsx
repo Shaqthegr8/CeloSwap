@@ -1,13 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { WagmiConfig, createClient, configureChains, defaultChains } from 'wagmi';
+import { BrowserRouter as Router, Route, } from 'react-router-dom';
+import { WagmiConfig } from 'wagmi';
 import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
-import { CeloAlfajores } from '@celo-tools/hardhat-celo';
-import Home from './components/Home';
-import Product from './components/Product';
+import { Alfajores } from '@celo-tools/use-contractkit';
+import Home from './app/(tabs)/(Home)';
 
 // Create wagmi client
-const { chains, provider } = configureChains([CeloAlfajores], [
+const { chains, provider } = configureChains([Alfajores], [
   // Define providers here if needed
 ]);
 
